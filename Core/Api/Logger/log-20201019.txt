@@ -1,0 +1,185 @@
+
+[15:43:01ERR]
+An unhandled exception has occurred while executing the request.
+System.ArgumentException: There is an incomplete parameter in the route template. Check that each '{' character has a matching '}' character.
+Parameter name: routeTemplate ---> Microsoft.AspNetCore.Routing.Patterns.RoutePatternException: There is an incomplete parameter in the route template. Check that each '{' character has a matching '}' character.
+   at Microsoft.AspNetCore.Routing.Patterns.RoutePatternParser.Parse(String pattern)
+   at Microsoft.AspNetCore.Routing.Template.TemplateParser.Parse(String routeTemplate)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Routing.Template.TemplateParser.Parse(String routeTemplate)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiDescriptionProvider.CreateApiDescription(ControllerActionDescriptor action, String httpMethod, String groupName)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiDescriptionProvider.OnProvidersExecuting(ApiDescriptionProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.GetCollection(ActionDescriptorCollection actionDescriptors)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.get_ApiDescriptionGroups()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath, String[] schemes)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\workspace\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 69
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[15:43:11ERR]
+An unhandled exception has occurred while executing the request.
+System.ArgumentException: There is an incomplete parameter in the route template. Check that each '{' character has a matching '}' character.
+Parameter name: routeTemplate ---> Microsoft.AspNetCore.Routing.Patterns.RoutePatternException: There is an incomplete parameter in the route template. Check that each '{' character has a matching '}' character.
+   at Microsoft.AspNetCore.Routing.Patterns.RoutePatternParser.Parse(String pattern)
+   at Microsoft.AspNetCore.Routing.Template.TemplateParser.Parse(String routeTemplate)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Routing.Template.TemplateParser.Parse(String routeTemplate)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiDescriptionProvider.CreateApiDescription(ControllerActionDescriptor action, String httpMethod, String groupName)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiDescriptionProvider.OnProvidersExecuting(ApiDescriptionProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.GetCollection(ActionDescriptorCollection actionDescriptors)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.get_ApiDescriptionGroups()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath, String[] schemes)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\workspace\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 69
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[15:43:12ERR]
+An unhandled exception has occurred while executing the request.
+System.ArgumentException: There is an incomplete parameter in the route template. Check that each '{' character has a matching '}' character.
+Parameter name: routeTemplate ---> Microsoft.AspNetCore.Routing.Patterns.RoutePatternException: There is an incomplete parameter in the route template. Check that each '{' character has a matching '}' character.
+   at Microsoft.AspNetCore.Routing.Patterns.RoutePatternParser.Parse(String pattern)
+   at Microsoft.AspNetCore.Routing.Template.TemplateParser.Parse(String routeTemplate)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Routing.Template.TemplateParser.Parse(String routeTemplate)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiDescriptionProvider.CreateApiDescription(ControllerActionDescriptor action, String httpMethod, String groupName)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiDescriptionProvider.OnProvidersExecuting(ApiDescriptionProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.GetCollection(ActionDescriptorCollection actionDescriptors)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.get_ApiDescriptionGroups()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath, String[] schemes)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\workspace\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 69
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[15:44:39ERR]
+An unhandled exception has occurred while executing the request.
+System.ArgumentException: There is an incomplete parameter in the route template. Check that each '{' character has a matching '}' character.
+Parameter name: routeTemplate ---> Microsoft.AspNetCore.Routing.Patterns.RoutePatternException: There is an incomplete parameter in the route template. Check that each '{' character has a matching '}' character.
+   at Microsoft.AspNetCore.Routing.Patterns.RoutePatternParser.Parse(String pattern)
+   at Microsoft.AspNetCore.Routing.Template.TemplateParser.Parse(String routeTemplate)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Routing.Template.TemplateParser.Parse(String routeTemplate)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiDescriptionProvider.CreateApiDescription(ControllerActionDescriptor action, String httpMethod, String groupName)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiDescriptionProvider.OnProvidersExecuting(ApiDescriptionProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.GetCollection(ActionDescriptorCollection actionDescriptors)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.get_ApiDescriptionGroups()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath, String[] schemes)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\workspace\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 69
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[15:46:05ERR]
+An unhandled exception has occurred while executing the request.
+System.ArgumentException: There is an incomplete parameter in the route template. Check that each '{' character has a matching '}' character.
+Parameter name: routeTemplate ---> Microsoft.AspNetCore.Routing.Patterns.RoutePatternException: There is an incomplete parameter in the route template. Check that each '{' character has a matching '}' character.
+   at Microsoft.AspNetCore.Routing.Patterns.RoutePatternParser.Parse(String pattern)
+   at Microsoft.AspNetCore.Routing.Template.TemplateParser.Parse(String routeTemplate)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Routing.Template.TemplateParser.Parse(String routeTemplate)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiDescriptionProvider.CreateApiDescription(ControllerActionDescriptor action, String httpMethod, String groupName)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiDescriptionProvider.OnProvidersExecuting(ApiDescriptionProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.GetCollection(ActionDescriptorCollection actionDescriptors)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.get_ApiDescriptionGroups()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath, String[] schemes)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\workspace\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 69
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[13:59:15ERR]
+An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ApplicationServices.Edarah.MeetingsApplication..ctor(IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor) in D:\WorkingFolder\edprivate\SourceCode\MobileApp\Core\ApplicationServices\Edarah\MeetingsApplication.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\WorkingFolder\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 69
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[13:59:36ERR]
+An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ApplicationServices.Edarah.MeetingsApplication..ctor(IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor) in D:\WorkingFolder\edprivate\SourceCode\MobileApp\Core\ApplicationServices\Edarah\MeetingsApplication.cs:line 25
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\WorkingFolder\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 69
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------

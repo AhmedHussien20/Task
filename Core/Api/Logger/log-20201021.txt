@@ -1,0 +1,1118 @@
+
+[11:04:09ERR]
+An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The property 'Committee.RoomMemembersIdFromDb' could not be mapped, because it is of type 'List<long>' which is not a supported primitive type or a valid entity type. Either explicitly map this property, or ignore it using the '[NotMapped]' attribute or by using 'EntityTypeBuilder.Ignore' in 'OnModelCreating'.
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.PropertyMappingValidationConvention.Apply(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelBuilt(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.ModelBuilder.FinalizeModel()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Set[TEntity]()
+   at DataAccess.Edarah.Repository`1..ctor(EdarahContext context) in D:\SourceCode\Edarah\edprivate\SourceCode\MobileApp\Core\DataAccess\Edarah\Repository.cs:line 17
+   at DataAccess.Edarah.Custom.ChatRepository..ctor(EdarahContext context) in D:\SourceCode\Edarah\edprivate\SourceCode\MobileApp\Core\DataAccess\Edarah\Custom\ChatRepository.cs:line 14
+   at DataAccess.Edarah.UnitOfWork..ctor(EdarahContext Context) in D:\SourceCode\Edarah\edprivate\SourceCode\MobileApp\Core\DataAccess\Edarah\UnitOfWork.cs:line 101
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.InvokeCore(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\SourceCode\Edarah\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 76
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[11:04:24ERR]
+Connection request timed out
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:04:24ERR]
+Connection request timed out
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:04:40ERR]
+Execution Worker is in the Failed state now due to an exception, execution will be retried no more than in 00:01:21
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+   at Hangfire.Oracle.Core.OracleStorageConnection.FetchNextJob(String[] queues, CancellationToken cancellationToken)
+   at Hangfire.Server.Worker.Execute(BackgroundProcessContext context)
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+
+-------------
+
+[11:04:52ERR]
+Execution DelayedJobScheduler is in the Failed state now due to an exception, execution will be retried no more than in 00:00:04
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> OracleInternal.Network.NetworkException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.TTC.OraBufReader.GetDataFromNetwork()
+   at OracleInternal.TTC.OraBufReader.Read(Boolean bIgnoreData)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.AcquireLock(String resource, TimeSpan timeout)
+   at Hangfire.Oracle.Core.OracleDistributedLock.Acquire()
+   at Hangfire.Oracle.Core.OracleStorageConnection.AcquireDistributedLock(String resource, TimeSpan timeout)
+   at Hangfire.Server.DelayedJobScheduler.UseConnectionDistributedLock[T](JobStorage storage, Func`2 action)
+   at Hangfire.Server.DelayedJobScheduler.Execute(BackgroundProcessContext context)
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+
+-------------
+
+[11:05:00ERR]
+ORA-12570: Network Session: Unexpected packet read error
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> OracleInternal.Network.NetworkException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.TTC.OraBufReader.GetDataFromNetwork()
+   at OracleInternal.TTC.OraBufReader.Read(Boolean bIgnoreData)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:05:01ERR]
+Oracle error ORA-12571 encountered
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Oracle error ORA-12571 encountered ---> OracleInternal.Network.NetworkException (0x80004005): Oracle error ORA-12571 encountered ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host
+   at OracleInternal.Network.TcpTransportAdapter.Send(OraBuf OB)
+   at OracleInternal.Network.TcpTransportAdapter.Send(OraBuf OB)
+   at OracleInternal.Network.WriterStream.Write(OraBuf OB)
+   at OracleInternal.TTC.OraBufWriter.FlushData()
+   at OracleInternal.TTC.TTCReExecuteSql.WriteMessage(Int16 ttcCallCode, Int32 cursorId, Int32 exerof, Int32 execFlags, Int64 numIterations, Boolean bArrayBinding, MarshalBindParameterValueHelper& marshalBindParamsHelper)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCReExecuteSql.WriteMessage(Int16 ttcCallCode, Int32 cursorId, Int32 exerof, Int32 execFlags, Int64 numIterations, Boolean bArrayBinding, MarshalBindParameterValueHelper& marshalBindParamsHelper)
+   at OracleInternal.TTC.TTCExecuteSql.SendReExecuteRequest(OracleConnectionImpl commImpl, Int32 cursorId, Int64 noOfRowsToFetch, Boolean bAutoCommit, Boolean bDisableCompressedFetch, SqlStatementType stmtType, Int32 arrayBindCount, MarshalBindParameterValueHelper& marshalArrayBindValuesHelper)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:05:02ERR]
+ORA-12570: Network Session: Unexpected packet read error
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> OracleInternal.Network.NetworkException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.TTC.OraBufReader.GetDataFromNetwork()
+   at OracleInternal.TTC.OraBufReader.Read(Boolean bIgnoreData)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:05:07ERR]
+ORA-12570: Network Session: Unexpected packet read error
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> OracleInternal.Network.NetworkException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.TTC.OraBufReader.GetDataFromNetwork()
+   at OracleInternal.TTC.OraBufReader.Read(Boolean bIgnoreData)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:05:08ERR]
+ORA-12570: Network Session: Unexpected packet read error
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> OracleInternal.Network.NetworkException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.TTC.OraBufReader.GetDataFromNetwork()
+   at OracleInternal.TTC.OraBufReader.Read(Boolean bIgnoreData)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:05:09ERR]
+ORA-12570: Network Session: Unexpected packet read error
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> OracleInternal.Network.NetworkException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.TTC.OraBufReader.GetDataFromNetwork()
+   at OracleInternal.TTC.OraBufReader.Read(Boolean bIgnoreData)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:05:10ERR]
+Oracle error ORA-12571 encountered
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Oracle error ORA-12571 encountered ---> OracleInternal.Network.NetworkException (0x80004005): Oracle error ORA-12571 encountered ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host
+   at OracleInternal.Network.TcpTransportAdapter.Send(OraBuf OB)
+   at OracleInternal.Network.TcpTransportAdapter.Send(OraBuf OB)
+   at OracleInternal.Network.WriterStream.Write(OraBuf OB)
+   at OracleInternal.TTC.OraBufWriter.FlushData()
+   at OracleInternal.TTC.TTCExecuteSql.WriteOall8Message(Byte[] sqlStmtByteStream, Int32 cursorId, Int64 dbChangeRegistrationId, Int64 executeOptions, ColumnDescribeInfo[] colDefinesInfoArray, Int32 longFetchSize, Int32 arrayBindCount, Int32 numDefineCols, Int64 noOfRowsToFetch, SqlStatementType stmtType, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int32 startIndex)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCExecuteSql.WriteOall8Message(Byte[] sqlStmtByteStream, Int32 cursorId, Int64 dbChangeRegistrationId, Int64 executeOptions, ColumnDescribeInfo[] colDefinesInfoArray, Int32 longFetchSize, Int32 arrayBindCount, Int32 numDefineCols, Int64 noOfRowsToFetch, SqlStatementType stmtType, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int32 startIndex)
+   at OracleInternal.TTC.TTCExecuteSql.SendExecuteRequest(OracleConnectionImpl commImpl, Byte[] sqlStmtByteStream, Boolean bHasReturningClause, Int32 cursorId, Int64 dbChangeRegistrationId, ColumnDescribeInfo[] columnDefines, Int64 noOfRowsToFetch, Boolean parse, Boolean execute, Boolean fetch, Boolean define, Boolean bAutoCommit, Boolean bDisableCompressedFetch, SqlStatementType stmtType, Int32 longFetchSize, Int32 arrayBindCount, Int64[] scnForSnapshot, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int32 startIndex)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:05:15ERR]
+ORA-12570: Network Session: Unexpected packet read error
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> OracleInternal.Network.NetworkException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.TTC.OraBufReader.GetDataFromNetwork()
+   at OracleInternal.TTC.OraBufReader.Read(Boolean bIgnoreData)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:05:17ERR]
+ORA-12570: Network Session: Unexpected packet read error
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> OracleInternal.Network.NetworkException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.TTC.OraBufReader.GetDataFromNetwork()
+   at OracleInternal.TTC.OraBufReader.Read(Boolean bIgnoreData)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:05:17ERR]
+Oracle error ORA-12571 encountered
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Oracle error ORA-12571 encountered ---> OracleInternal.Network.NetworkException (0x80004005): Oracle error ORA-12571 encountered ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host
+   at OracleInternal.Network.TcpTransportAdapter.Send(OraBuf OB)
+   at OracleInternal.Network.TcpTransportAdapter.Send(OraBuf OB)
+   at OracleInternal.Network.WriterStream.Write(OraBuf OB)
+   at OracleInternal.TTC.OraBufWriter.FlushData()
+   at OracleInternal.TTC.TTCReExecuteSql.WriteMessage(Int16 ttcCallCode, Int32 cursorId, Int32 exerof, Int32 execFlags, Int64 numIterations, Boolean bArrayBinding, MarshalBindParameterValueHelper& marshalBindParamsHelper)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCReExecuteSql.WriteMessage(Int16 ttcCallCode, Int32 cursorId, Int32 exerof, Int32 execFlags, Int64 numIterations, Boolean bArrayBinding, MarshalBindParameterValueHelper& marshalBindParamsHelper)
+   at OracleInternal.TTC.TTCExecuteSql.SendReExecuteRequest(OracleConnectionImpl commImpl, Int32 cursorId, Int64 noOfRowsToFetch, Boolean bAutoCommit, Boolean bDisableCompressedFetch, SqlStatementType stmtType, Int32 arrayBindCount, MarshalBindParameterValueHelper& marshalArrayBindValuesHelper)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:05:20ERR]
+Oracle error ORA-12571 encountered
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Oracle error ORA-12571 encountered ---> OracleInternal.Network.NetworkException (0x80004005): Oracle error ORA-12571 encountered ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host
+   at OracleInternal.Network.TcpTransportAdapter.Send(OraBuf OB)
+   at OracleInternal.Network.TcpTransportAdapter.Send(OraBuf OB)
+   at OracleInternal.Network.WriterStream.Write(OraBuf OB)
+   at OracleInternal.TTC.OraBufWriter.FlushData()
+   at OracleInternal.TTC.TTCReExecuteSql.WriteMessage(Int16 ttcCallCode, Int32 cursorId, Int32 exerof, Int32 execFlags, Int64 numIterations, Boolean bArrayBinding, MarshalBindParameterValueHelper& marshalBindParamsHelper)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCReExecuteSql.WriteMessage(Int16 ttcCallCode, Int32 cursorId, Int32 exerof, Int32 execFlags, Int64 numIterations, Boolean bArrayBinding, MarshalBindParameterValueHelper& marshalBindParamsHelper)
+   at OracleInternal.TTC.TTCExecuteSql.SendReExecuteRequest(OracleConnectionImpl commImpl, Int32 cursorId, Int64 noOfRowsToFetch, Boolean bAutoCommit, Boolean bDisableCompressedFetch, SqlStatementType stmtType, Int32 arrayBindCount, MarshalBindParameterValueHelper& marshalArrayBindValuesHelper)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:05:22ERR]
+Oracle error ORA-12571 encountered
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Oracle error ORA-12571 encountered ---> OracleInternal.Network.NetworkException (0x80004005): Oracle error ORA-12571 encountered ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host
+   at OracleInternal.Network.TcpTransportAdapter.Send(OraBuf OB)
+   at OracleInternal.Network.TcpTransportAdapter.Send(OraBuf OB)
+   at OracleInternal.Network.WriterStream.Write(OraBuf OB)
+   at OracleInternal.TTC.OraBufWriter.FlushData()
+   at OracleInternal.TTC.TTCExecuteSql.WriteOall8Message(Byte[] sqlStmtByteStream, Int32 cursorId, Int64 dbChangeRegistrationId, Int64 executeOptions, ColumnDescribeInfo[] colDefinesInfoArray, Int32 longFetchSize, Int32 arrayBindCount, Int32 numDefineCols, Int64 noOfRowsToFetch, SqlStatementType stmtType, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int32 startIndex)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCExecuteSql.WriteOall8Message(Byte[] sqlStmtByteStream, Int32 cursorId, Int64 dbChangeRegistrationId, Int64 executeOptions, ColumnDescribeInfo[] colDefinesInfoArray, Int32 longFetchSize, Int32 arrayBindCount, Int32 numDefineCols, Int64 noOfRowsToFetch, SqlStatementType stmtType, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int32 startIndex)
+   at OracleInternal.TTC.TTCExecuteSql.SendExecuteRequest(OracleConnectionImpl commImpl, Byte[] sqlStmtByteStream, Boolean bHasReturningClause, Int32 cursorId, Int64 dbChangeRegistrationId, ColumnDescribeInfo[] columnDefines, Int64 noOfRowsToFetch, Boolean parse, Boolean execute, Boolean fetch, Boolean define, Boolean bAutoCommit, Boolean bDisableCompressedFetch, SqlStatementType stmtType, Int32 longFetchSize, Int32 arrayBindCount, Int64[] scnForSnapshot, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int32 startIndex)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:05:28ERR]
+Execution RecurringJobScheduler is in the Failed state now due to an exception, execution will be retried no more than in 00:00:04
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> OracleInternal.Network.NetworkException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.TTC.OraBufReader.GetDataFromNetwork()
+   at OracleInternal.TTC.OraBufReader.Read(Boolean bIgnoreData)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.AcquireLock(String resource, TimeSpan timeout)
+   at Hangfire.Oracle.Core.OracleDistributedLock.Acquire()
+   at Hangfire.Oracle.Core.OracleStorageConnection.AcquireDistributedLock(String resource, TimeSpan timeout)
+   at Hangfire.Server.RecurringJobScheduler.UseConnectionDistributedLock[T](JobStorage storage, Func`2 action)
+   at Hangfire.Server.RecurringJobScheduler.Execute(BackgroundProcessContext context)
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+
+-------------
+
+[11:07:40ERR]
+Execution ServerWatchdog is in the Failed state now due to an exception, execution will be retried no more than in 00:00:04
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.OracleStorage.UseConnection[T](Func`2 func)
+   at Hangfire.Oracle.Core.OracleStorageConnection.RemoveTimedOutServers(TimeSpan timeOut)
+   at Hangfire.Server.ServerWatchdog.Execute(BackgroundProcessContext context)
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+
+-------------
+
+[11:07:46ERR]
+Execution CountersAggregator is in the Failed state now due to an exception, execution will be retried no more than in 00:00:04
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.OracleStorage.UseConnection[T](Func`2 func)
+   at Hangfire.Oracle.Core.OracleStorage.UseConnection(Action`1 action)
+   at Hangfire.Oracle.Core.CountersAggregator.Execute(CancellationToken cancellationToken)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+
+-------------
+
+[11:40:16ERR]
+Connection request timed out
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:40:16ERR]
+Execution Worker is in the Failed state now due to an exception, execution will be retried no more than in 00:00:09
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+   at Hangfire.Oracle.Core.OracleStorageConnection.FetchNextJob(String[] queues, CancellationToken cancellationToken)
+   at Hangfire.Server.Worker.Execute(BackgroundProcessContext context)
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+
+-------------
+
+[11:40:30ERR]
+Connection request timed out
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:40:31ERR]
+Connection request timed out
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:41:27ERR]
+Connection request timed out
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:42:39ERR]
+Connection request timed out
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:43:28ERR]
+Oracle error ORA-12571 encountered
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Oracle error ORA-12571 encountered ---> OracleInternal.Network.NetworkException (0x80004005): Oracle error ORA-12571 encountered ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host
+   at OracleInternal.Network.TcpTransportAdapter.Send(OraBuf OB)
+   at OracleInternal.Network.TcpTransportAdapter.Send(OraBuf OB)
+   at OracleInternal.Network.WriterStream.Write(OraBuf OB)
+   at OracleInternal.TTC.OraBufWriter.FlushData()
+   at OracleInternal.TTC.TTCExecuteSql.WriteOall8Message(Byte[] sqlStmtByteStream, Int32 cursorId, Int64 dbChangeRegistrationId, Int64 executeOptions, ColumnDescribeInfo[] colDefinesInfoArray, Int32 longFetchSize, Int32 arrayBindCount, Int32 numDefineCols, Int64 noOfRowsToFetch, SqlStatementType stmtType, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int32 startIndex)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCExecuteSql.WriteOall8Message(Byte[] sqlStmtByteStream, Int32 cursorId, Int64 dbChangeRegistrationId, Int64 executeOptions, ColumnDescribeInfo[] colDefinesInfoArray, Int32 longFetchSize, Int32 arrayBindCount, Int32 numDefineCols, Int64 noOfRowsToFetch, SqlStatementType stmtType, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int32 startIndex)
+   at OracleInternal.TTC.TTCExecuteSql.SendExecuteRequest(OracleConnectionImpl commImpl, Byte[] sqlStmtByteStream, Boolean bHasReturningClause, Int32 cursorId, Int64 dbChangeRegistrationId, ColumnDescribeInfo[] columnDefines, Int64 noOfRowsToFetch, Boolean parse, Boolean execute, Boolean fetch, Boolean define, Boolean bAutoCommit, Boolean bDisableCompressedFetch, SqlStatementType stmtType, Int32 longFetchSize, Int32 arrayBindCount, Int64[] scnForSnapshot, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int32 startIndex)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:43:34ERR]
+Oracle error ORA-12571 encountered
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Oracle error ORA-12571 encountered ---> OracleInternal.Network.NetworkException (0x80004005): Oracle error ORA-12571 encountered ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host
+   at OracleInternal.Network.TcpTransportAdapter.Send(OraBuf OB)
+   at OracleInternal.Network.TcpTransportAdapter.Send(OraBuf OB)
+   at OracleInternal.Network.WriterStream.Write(OraBuf OB)
+   at OracleInternal.TTC.OraBufWriter.FlushData()
+   at OracleInternal.TTC.TTCExecuteSql.WriteOall8Message(Byte[] sqlStmtByteStream, Int32 cursorId, Int64 dbChangeRegistrationId, Int64 executeOptions, ColumnDescribeInfo[] colDefinesInfoArray, Int32 longFetchSize, Int32 arrayBindCount, Int32 numDefineCols, Int64 noOfRowsToFetch, SqlStatementType stmtType, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int32 startIndex)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCExecuteSql.WriteOall8Message(Byte[] sqlStmtByteStream, Int32 cursorId, Int64 dbChangeRegistrationId, Int64 executeOptions, ColumnDescribeInfo[] colDefinesInfoArray, Int32 longFetchSize, Int32 arrayBindCount, Int32 numDefineCols, Int64 noOfRowsToFetch, SqlStatementType stmtType, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int32 startIndex)
+   at OracleInternal.TTC.TTCExecuteSql.SendExecuteRequest(OracleConnectionImpl commImpl, Byte[] sqlStmtByteStream, Boolean bHasReturningClause, Int32 cursorId, Int64 dbChangeRegistrationId, ColumnDescribeInfo[] columnDefines, Int64 noOfRowsToFetch, Boolean parse, Boolean execute, Boolean fetch, Boolean define, Boolean bAutoCommit, Boolean bDisableCompressedFetch, SqlStatementType stmtType, Int32 longFetchSize, Int32 arrayBindCount, Int64[] scnForSnapshot, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int32 startIndex)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[11:45:33ERR]
+An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Action 'Api.Controllers.Edarah.ChatController.ChatAttachment (Api)' does not have an attribute route. Action methods on controllers annotated with ApiControllerAttribute must be attribute routed.
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.EnsureActionIsAttributeRouted(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\SourceCode\Edarah\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 74
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[11:45:43ERR]
+An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Action 'Api.Controllers.Edarah.ChatController.ChatAttachment (Api)' does not have an attribute route. Action methods on controllers annotated with ApiControllerAttribute must be attribute routed.
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.EnsureActionIsAttributeRouted(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\SourceCode\Edarah\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 74
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[11:46:07ERR]
+An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Action 'Api.Controllers.Edarah.ChatController.ChatAttachment (Api)' does not have an attribute route. Action methods on controllers annotated with ApiControllerAttribute must be attribute routed.
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.EnsureActionIsAttributeRouted(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.InvokeCore(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\SourceCode\Edarah\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 74
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[11:48:12ERR]
+An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Action 'Api.Controllers.Edarah.ChatController.ChatAttachment (Api)' does not have an attribute route. Action methods on controllers annotated with ApiControllerAttribute must be attribute routed.
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.EnsureActionIsAttributeRouted(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\SourceCode\Edarah\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 74
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[11:49:00ERR]
+An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Action 'Api.Controllers.Edarah.ChatController.ChatAttachment (Api)' does not have an attribute route. Action methods on controllers annotated with ApiControllerAttribute must be attribute routed.
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.EnsureActionIsAttributeRouted(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\SourceCode\Edarah\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 74
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[11:49:47ERR]
+An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Action 'Api.Controllers.Edarah.ChatController.ChatAttachment (Api)' does not have an attribute route. Action methods on controllers annotated with ApiControllerAttribute must be attribute routed.
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.EnsureActionIsAttributeRouted(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.InvokeCore(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\SourceCode\Edarah\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 74
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[11:50:35ERR]
+An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Action 'Api.Controllers.Edarah.ChatController.ChatAttachment (Api)' does not have an attribute route. Action methods on controllers annotated with ApiControllerAttribute must be attribute routed.
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.EnsureActionIsAttributeRouted(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.InvokeCore(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\SourceCode\Edarah\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 74
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[12:00:48ERR]
+An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Action 'Api.Controllers.Edarah.ChatController.ChatAttachment (Api)' does not have an attribute route. Action methods on controllers annotated with ApiControllerAttribute must be attribute routed.
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.EnsureActionIsAttributeRouted(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.InvokeCore(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\SourceCode\Edarah\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 74
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[12:00:51ERR]
+Connection request timed out
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[12:00:52ERR]
+ORA-12570: Network Session: Unexpected packet read error
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> OracleInternal.Network.NetworkException (0x80004005): ORA-12570: Network Session: Unexpected packet read error ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.Network.ReaderStream.Read(OraBuf OB)
+   at OracleInternal.TTC.OraBufReader.GetDataFromNetwork()
+   at OracleInternal.TTC.OraBufReader.Read(Boolean bIgnoreData)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at Oracle.ManagedDataAccess.Client.OracleException.HandleError(OracleTraceLevel level, OracleTraceTag tag, OracleTraceClassName className, OracleTraceFuncName funcName, Exception ex, OracleLogicalTransaction oracleLogicalTransaction)
+   at OracleInternal.TTC.TTCExecuteSql.ReceiveExecuteResponse(Accessor[]& defineAccessors, Accessor[] bindAccessors, Boolean bHasReturningParams, SQLMetaData& sqlMetaData, SqlStatementType statementType, Int64 noOfRowsFetchedLastTime, Int32 noOfRowsToFetch, Int32& noOfRowsFetched, Int64& queryId, Int32 longFetchSize, Int64 initialLOBFetchSize, Int64[] scnFromExecution, Boolean bAllInputBinds, Int32 arrayBindCount, DataUnmarshaller& dataUnmarshaller, MarshalBindParameterValueHelper& marshalBindParamsHelper, Int64[]& rowsAffectedByArrayBind, Boolean bDefineDone, Boolean& bMoreThanOneRowAffectedByDmlWithRetClause, List`1& implicitRSList, Boolean bLOBArrayFetchRequired)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction& oracleLogicalTransaction, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in C:\projects\dapper\Dapper\SqlMapper.cs:line 2827
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in C:\projects\dapper\Dapper\SqlMapper.cs:line 570
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 443
+   at Hangfire.Oracle.Core.OracleDistributedLock.Release()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[12:04:49ERR]
+An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Action 'Api.Controllers.Edarah.ChatController.ChatAttachment (Api)' does not have an attribute route. Action methods on controllers annotated with ApiControllerAttribute must be attribute routed.
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.EnsureActionIsAttributeRouted(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.get_ApiDescriptionGroups()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath, String[] schemes)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\SourceCode\Edarah\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 74
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[17:13:08ERR]
+Connection request timed out
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[17:13:09ERR]
+Execution RecurringJobScheduler is in the Failed state now due to an exception, execution will be retried no more than in 00:00:04
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.OracleStorageConnection.AcquireDistributedLock(String resource, TimeSpan timeout)
+   at Hangfire.Server.RecurringJobScheduler.UseConnectionDistributedLock[T](JobStorage storage, Func`2 action)
+   at Hangfire.Server.RecurringJobScheduler.Execute(BackgroundProcessContext context)
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+
+-------------
+
+[17:13:09ERR]
+Execution DelayedJobScheduler is in the Failed state now due to an exception, execution will be retried no more than in 00:00:04
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.OracleStorageConnection.AcquireDistributedLock(String resource, TimeSpan timeout)
+   at Hangfire.Server.DelayedJobScheduler.UseConnectionDistributedLock[T](JobStorage storage, Func`2 action)
+   at Hangfire.Server.DelayedJobScheduler.Execute(BackgroundProcessContext context)
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+
+-------------
+
+[17:13:23ERR]
+Execution ServerWatchdog is in the Failed state now due to an exception, execution will be retried no more than in 00:00:04
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.OracleStorage.UseConnection[T](Func`2 func)
+   at Hangfire.Oracle.Core.OracleStorageConnection.RemoveTimedOutServers(TimeSpan timeOut)
+   at Hangfire.Server.ServerWatchdog.Execute(BackgroundProcessContext context)
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+
+-------------
+
+[17:13:23ERR]
+Execution Worker is in the Failed state now due to an exception, execution will be retried no more than in 00:05:00
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+   at Hangfire.Oracle.Core.OracleStorageConnection.FetchNextJob(String[] queues, CancellationToken cancellationToken)
+   at Hangfire.Server.Worker.Execute(BackgroundProcessContext context)
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+
+-------------
+
+[17:13:23ERR]
+Execution ExpirationManager is in the Failed state now due to an exception, execution will be retried no more than in 00:00:04
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.OracleStorage.UseConnection[T](Func`2 func)
+   at Hangfire.Oracle.Core.OracleStorage.UseConnection(Action`1 action)
+   at Hangfire.Oracle.Core.ExpirationManager.Execute(CancellationToken cancellationToken)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+
+-------------
+
+[17:13:31ERR]
+An error occurred using the connection to database '' on server '(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.35.2)(PORT=1521))(CONNECT_DATA=(SERVER=dedicated)(SERVICE_NAME=devadfutf)))'.
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+
+-------------
+
+[17:13:31ERR]
+An exception occurred while iterating over the results of a query for context type 'DataAccess.Edarah.EdarahContext'.
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Oracle.EntityFrameworkCore.Storage.Internal.OracleExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Oracle.EntityFrameworkCore.Storage.Internal.OracleExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+
+-------------
+
+[17:13:31ERR]
+An exception occurred while iterating over the results of a query for context type 'DataAccess.Edarah.EdarahContext'.
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Oracle.EntityFrameworkCore.Storage.Internal.OracleExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Oracle.EntityFrameworkCore.Storage.Internal.OracleExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+
+-------------
+
+[17:13:44ERR]
+Connection request timed out
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[17:13:44ERR]
+An unhandled exception has occurred while executing the request.
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Oracle.EntityFrameworkCore.Storage.Internal.OracleExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   at ApplicationServices.Edarah.UserApplication.ValidateUser(UserLoginDTO userLoginDTO) in D:\workspace\edprivate\SourceCode\MobileApp\Core\ApplicationServices\Edarah\UserApplication.cs:line 94
+   at Api.Controllers.Edarah.UserController.LoginUser(UserLoginDTO userLoginDTO) in D:\workspace\edprivate\SourceCode\MobileApp\Core\Api\Controllers\Edarah\UserController.cs:line 61
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.InvokeCore(HttpContext context)
+   at Api.Startup.<>c.<<Configure>b__5_0>d.MoveNext() in D:\workspace\edprivate\SourceCode\MobileApp\Core\Api\Startup.cs:line 74
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+-------------
+
+[17:16:53ERR]
+Connection request timed out
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[17:18:23ERR]
+Connection request timed out
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[17:18:38ERR]
+Connection request timed out
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
+
+[17:18:59ERR]
+Connection request timed out
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Hangfire.Oracle.Core.OracleStorage.CreateAndOpenConnection()
+   at Hangfire.Oracle.Core.JobQueue.OracleJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+
+-------------
