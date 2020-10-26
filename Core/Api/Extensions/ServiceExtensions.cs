@@ -52,11 +52,7 @@ namespace Api.Extensions
         public static void ConfigureMVC(this IServiceCollection services)
         {
             services.AddMvc(options => options.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddMvc().AddJsonOptions(options =>
-            {
-                options.SerializerSettings.ContractResolver = new DefaultContractResolver();
-                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-            });
+           
         }
 
         public static void ConfigureRepoAndUnitOfWork(this IServiceCollection services)

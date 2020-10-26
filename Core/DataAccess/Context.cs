@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Model;
-
+using System.Reflection;
 
 namespace DataAccess
 {
@@ -24,8 +24,9 @@ namespace DataAccess
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Model.Relational().MaxIdentifierLength = 30;
-            modelBuilder.Seed();
+
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            
         }
     }
 }

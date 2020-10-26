@@ -1,9 +1,11 @@
-﻿using DataTransferObject;
+﻿
+using ApplicationServices;
+using DataTransferObject;
+using DataTransferObject.User;
 using Microsoft.AspNetCore.Mvc;
 
 using System;
-using ApplicationServices;
-using DataTransferObject.User;
+
 
 namespace Api.Controllers.Edarah
 {
