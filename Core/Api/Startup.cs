@@ -42,7 +42,7 @@ namespace Api
 
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app,  ILoggerFactory loggerFactory)
         {
             app.UseMiddleware<StackifyMiddleware.RequestTracerMiddleware>();
 
@@ -64,42 +64,26 @@ namespace Api
 
             app.UseAuthentication();
             app.UseSession();
-
-
-
-
-            //if (!env.IsDevelopment())
-            //{
-
-            Log.Logger = new LoggerConfiguration()
-            // .MinimumLevel.Error()
-            // .WriteTo.Email(emailInfo, outputTemplate: "{NewLine}[{Timestamp:HH:mm:ss}{Level:u3}]{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}-------------{NewLine}", Serilog.Events.LogEventLevel.Error)
-            .WriteTo.RollingFile("Logger//log-{Date}.txt", Serilog.Events.LogEventLevel.Error, outputTemplate: "{NewLine}[{Timestamp:HH:mm:ss}{Level:u3}]{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}-------------{NewLine}")
-           // .WriteTo.Seq("http://localhost:5341/")
-           .CreateLogger();
-            //}
-
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
                 options.SwaggerEndpoint(Configuration.GetSection("App:BaseRoot").Value + "/swagger/v1/swagger.json", "WebApi");
             });
 
-
             app.UseMvc();
         }
     }
 
-    public class BasePathFilter : IDocumentFilter
+    public class BasePathFilter //: IDocumentFilter
     {
         public IConfiguration Configuration { get; }
         public BasePathFilter(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-        public void Apply(SwaggerDocument swaggerDoc, DocumentFilterContext context)
-        {
-            swaggerDoc.BasePath = Configuration.GetSection("App:BaseRoot").Value;
-        }
+        //public void Apply(SwaggerDocument swaggerDoc, DocumentFilterContext context)
+        //{
+        //    swaggerDoc.BasePath = Configuration.GetSection("App:BaseRoot").Value;
+        //}
     }
 }

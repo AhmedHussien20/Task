@@ -23,14 +23,7 @@ namespace Model
 
         public string UserPassword { get; set; }
 
-        [MaxLength(Shared.DefaultStringLength)]
-
-        public string FullNameArabic { get; set; }
-
-        [MaxLength(Shared.DefaultStringLength)]
-
-        public string FullNameEnglish { get; set; }
-         
+      
         [NotMapped]
         public string Password
         {
@@ -47,19 +40,8 @@ namespace Model
         public string MobileNo { get; set; }
         [MaxLength(100)]
         public string Email { get; set; }
-        [MaxLength(Shared.DefaultStringLength)]
-        public string DeviceToken { get; set; }
-
-        [MaxLength(5)]
-        public string CountryKey { get; set; }
-
-        [MaxLength(Shared.DefaultStringLength)]
-        public string ImgUrl { get; set; }
-
-        [NotMapped]
-        public long? CurrentConnectedContactId { get; set; }
-
-        [NotMapped]
-        public long? CurrentConnectedRoomId { get; set; }
+ 
+ 
+ 
     }
 }

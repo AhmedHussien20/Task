@@ -78,28 +78,30 @@ namespace Api.Extensions
         public static void ConfigureSwagger(this IServiceCollection services)
         {
             // Swagger - Enable this line and the related lines in Configure method to enable swagger UI
-            BasicAuthScheme authScheme = new BasicAuthScheme();
+            //BasicAuthScheme authScheme = new BasicAuthScheme();
             //
 
             //
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new Info { Title = "WebApi", Version = "v1" });
+
+                //options.SwaggerDoc("v1", new Info { Title = "WebApi", Version = "v1" });
                 options.DocInclusionPredicate((docName, description) => true);
-                options.DocumentFilter<BasePathFilter>();
+                //options.DocumentFilter<BasePathFilter>();
 
                 var security = new Dictionary<string, IEnumerable<string>>
                 {
                     {"Bearer", new string[] { }},
                 };
-                options.AddSecurityDefinition("Bearer", new ApiKeyScheme
+                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Description = "Standard Authorization header using the Bearer scheme. Example: \"bearer {token}\"",
-                    In = ParameterLocation.Header.ToString(),
+                    In = ParameterLocation.Header ,
                     Name = "Authorization",
-                    Type = "apiKey"
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
                 });
-                options.AddSecurityRequirement(security);
+                //options.AddSecurityRequirement(security);
 
             });
         }

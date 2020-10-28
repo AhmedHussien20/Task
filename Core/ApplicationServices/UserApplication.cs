@@ -26,22 +26,19 @@ namespace ApplicationServices
         UserData Predata(UserRegistDTO dto)
         {
             UserData u = new UserData();
-            u.ImgUrl = dto.ImgUrl;
             u.MobileNo = dto.MobileNo;
-            u.FullNameArabic = dto.FullNameArabic;
-            u.FullNameEnglish = dto.FullNameEnglish;
             u.Email = dto.Email;
-            u.DeviceToken = dto.DeviceToken;
-            u.CountryKey = dto.CountryKey;
+            u.UserPassword = dto.Password;
+            u.UserName = dto.UserName;
             return u;
         }
         public object AddUser(UserRegistDTO dto)
         {
 
-            var chekUserExist = _unitOfWork.UserDataRepository.GetAll().Any(x => x.Email == dto.Email );
+            var chekUserExist = _unitOfWork.UserDataRepository.GetAll().Any(x => x.Email == dto.Email || x.UserName==dto.UserName );
             UserData record = new UserData(); 
             if (chekUserExist)
-                throw new BussinessException("this Emain is Exist!");
+                throw new BussinessException("this Email is Exist!");
           
                 record= Predata(dto);
                 _unitOfWork.UserDataRepository.Add(record);
@@ -50,11 +47,9 @@ namespace ApplicationServices
             
             return new
             {
-                dto.FullNameArabic,
-                dto.FullNameEnglish,
+                dto.UserName,
+                dto.MobileNo,
                 dto.Email,
-                dto.ImgUrl,
-                dto.CountryKey,
                 Token = CreateJwtToken(record)
             };
         }
@@ -62,7 +57,7 @@ namespace ApplicationServices
         {
             UserData userData = _unitOfWork.UserDataRepository
                             .GetAll()
-                            .Where(user => user.Email == userLoginDTO.Email && user.Password == userLoginDTO.Password)
+                            .Where(user => user.Email == userLoginDTO.Email && user.UserPassword == userLoginDTO.Password)
                             .SingleOrDefault();
 
             if(userData == null)
@@ -73,11 +68,10 @@ namespace ApplicationServices
             return new
             {
                 userData.ID,
-                userData.FullNameArabic,
-                userData.FullNameEnglish,
+                
                 userData.Email,
-                userData.ImgUrl,
-                userData.CountryKey,
+                userData.UserName,
+               
                 Token = CreateJwtToken(userData)
             };
         }
